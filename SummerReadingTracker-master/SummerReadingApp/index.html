@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/f068d0294b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/SummerReadingApp/styles/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1><i class="fas fa-book"></i><span id="read">Read</span>r.io</h1>
+  </header>
+  <div class="bodyWrapper">
+    <div class="forms">
+      <form action="" id="title-form">
+        <label for="title-form">Title</label>
+        <input type="text" id="title-input" />
+      </form>
+
+      <form action="" id="author-form">
+        <label for="author-form">Author</label>
+        <input type="text" id="author-input" />
+      </form>
+
+      <form action="" id="pages-form">
+        <label for="Pages-form">Pages</label>
+        <input type="text" id="pages-input" />
+      </form>
+      <button type="button" id="addBtn">Add Book</button>
+    </div>
+
+
+
+
+
+    <div class="listWrapper">
+      <h2>My List</h2>
+      <ul id="inprogressList">
+
+        <li><img src="/SummerReadingApp/img/book-flat.png" alt="bookIcon">The handmaidens tails By Author Suzie: 320
+          Pages</li>
+        <li class="checked"><img src="/SummerReadingApp/img/book-flat.png" alt="bookIcon">Harry potter By JK Rowling:
+          780 Pages</li>
+        <li><img src="/SummerReadingApp/img/book-flat.png" alt="bookIcon">Gossip girl By Coleman harrison: 220 Pages
+        </li>
+      </ul>
+      <button type="button" id="completeBtn">Mark As Completed</button>
+    </div>
+
+  </div>
+  <div class="pageTrackerWrapper">
+    <h2>Pages Read this Summer:</h2>
+    <p class="sentacePage">You have read <span class="pagesNum">0</span> pages this summer</p>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+
+</html>
