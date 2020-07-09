@@ -1,11 +1,14 @@
 body {
   height: 650px;
   width: 80%;
-  border: #428b8b;
-  border-style: solid;
-  border-radius: 30px;
-  -webkit-box-shadow: 10px 10px 10px 5px #778899;
-          box-shadow: 10px 10px 10px 5px #778899;
+  background: #f6e6b4;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #f6e6b4 0%, #ed9017 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6e6b4', endColorstr='#ed9017', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 }
 
 header {
@@ -22,17 +25,26 @@ header {
 }
 
 .bodyWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  border: #428b8b;
+  border-style: solid;
+  border-radius: 30px;
+  -webkit-box-shadow: 10px 10px 10px 5px #778899;
+          box-shadow: 10px 10px 10px 5px #778899;
 }
 
-.pageTrackerWrapper {
+.bodyWrapper .pageTrackerWrapper {
   text-align: center;
-  height: 30%;
-  margin: 5px 10px;
+  height: 50%;
   border: 3px solid #428b8b;
   border-radius: 30px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
@@ -41,12 +53,12 @@ header {
   transition: 0.2s;
 }
 
-.pageTrackerWrapper:hover {
+.bodyWrapper .pageTrackerWrapper:hover {
   -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
-.forms {
+.bodyWrapper .forms {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,18 +74,19 @@ header {
   border: #E6E6FA;
   border-style: solid;
   border-radius: 30px;
-  height: 300px;
-  width: 400px;
+  height: 100%;
+  width: 90%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.forms:hover {
+.bodyWrapper .forms:hover {
   -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
-.listWrapper {
+.bodyWrapper .listWrapper {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,40 +100,40 @@ header {
   border: #E6E6FA;
   border-style: solid;
   border-radius: 30px;
-  height: 60%;
-  width: 400px;
+  height: 100%;
+  width: 90%;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.listWrapper:hover {
+.bodyWrapper .listWrapper:hover {
   -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
-.listWrapper li {
+.bodyWrapper .listWrapper li {
   cursor: pointer;
 }
 
-li {
+.bodyWrapper li {
   padding: 3px;
   border: 1px solid #428b8b;
   margin: 5px;
 }
 
-.checked {
+.bodyWrapper .checked {
   -webkit-transition: border 0.1s;
   transition: border 0.1s;
   border: 5px solid #83806d;
 }
 
-label {
+.bodyWrapper label {
   margin-left: 5px;
 }
 
-input[type=text] {
+.bodyWrapper input[type=text] {
   width: 300px;
   padding: 10px;
   margin: 5px 0;
@@ -130,25 +143,25 @@ input[type=text] {
   transition: 0.1s;
 }
 
-input[type=text]:hover:active {
+.bodyWrapper input[type=text]:hover:active {
   border: 3px solid #428b8b;
   outline-color: #428b8b;
 }
 
-#completeBtn {
+.bodyWrapper #completeBtn {
   margin: 5px;
 }
 
-#inprogressList {
+.bodyWrapper #inprogressList {
   list-style: none;
 }
 
-ul img {
+.bodyWrapper ul img {
   width: 20px;
   height: 20px;
 }
 
-.read {
+.bodyWrapper .read {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
